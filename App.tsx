@@ -5,11 +5,16 @@
  * @format
  */
 
-import Gallery from 'components/Gallery';
+import { NavigationContainer } from '@react-navigation/native';
+import { Home } from 'components/Home';
 import React from 'react';
 
 function App(): React.JSX.Element {
-  return <Gallery />;
+  return (
+    <NavigationContainer>
+      <Home />
+    </NavigationContainer>
+  );
 }
 
 export default App;
