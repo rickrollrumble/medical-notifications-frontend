@@ -1,15 +1,15 @@
-import React from 'react';
-import { Button, Text, View } from 'react-native';
-import { styles } from 'styles';
+import React, { useState } from 'react';
+import { Calendar } from 'react-native-calendars';
 
-export function Schedule({navigation}:{navigation:any}): React.JSX.Element {
+export function Schedule({}:{navigation:any}): React.JSX.Element {
+  const [selected, setSelected] = useState('');
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <View style={styles.button}>
-        <Button title="Back to Home" onPress={()=>navigation.goBack()}/>
-      </View>
-      <Button title="Go to Schedule again" onPress={()=>navigation.push('Schedule')} />
-      <Text>Schedule</Text>
-    </View>
+    <Calendar
+    markingType={'period'}
+    markedDates={{
+      '2024-05-22': {startingDay: true, color: 'green', textColor:'white'},
+      '2024-05-23': {selected: true, endingDay: true, color: 'green', textColor: 'white'},
+    }}
+  />
   );
 }
