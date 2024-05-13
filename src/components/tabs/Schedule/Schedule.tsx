@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Calendar } from 'react-native-calendars';
 
 export function Schedule({}:{navigation:any}): React.JSX.Element {
-  const [selected, setSelected] = useState('');
   return (
     <Calendar
     markingType={'period'}
