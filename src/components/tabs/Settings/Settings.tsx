@@ -1,8 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import { styles } from 'styles';
 
-export function Settings() :React.JSX.Element{
+export function Settings(): React.JSX.Element {
     return <View>
-        <Text>Settings page</Text>
+        <Text style={styles.section}>Settings page</Text>
     </View>;
 }

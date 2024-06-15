@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
         fontSize: height / 36,
         marginBottom: '5%',
         marginLeft:'5%',
+        color:'black',
+    },
+    navBar: {
+        backgroundColor: 'blue',
     },
 });
 
